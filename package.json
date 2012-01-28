@@ -1,0 +1,33 @@
+{
+  "name":"aws-bootstrap",
+  "version":"0.6.0",
+  "description":"Amazon Web Services bootstrap",
+  "keywords":[
+    "amazon",
+    "web",
+    "services",
+    "cloudwatch",
+    "ec2",
+    "github",
+    "gist"
+  ],
+  "repository":"git://github.com/franklovecchio/aws-bootstrap.git",
+  "author":"Frank LoVecchio <franklovecchio@gmail.com> (http://franklovecchio.com)",
+  "dependencies":{
+    "long-stack-traces":"",
+    "commander": "",
+    "restler":"0.2.x",
+    "walker": "",
+    "ec2":"",
+    "node-cloudwatch":"0.0.4",
+    "walker":"",
+    "cassandra-client":""
+  },
+  "main":"bootstrap.js",
+  "license":{
+    "type":"Hack the planet"
+  },
+  "engines":{
+    "node":">= 0.4.8 <= 0.6.8"
+  }
+}

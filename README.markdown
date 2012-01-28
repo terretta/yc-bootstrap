@@ -37,6 +37,11 @@ Loadbalancer -> 2 Webservers/API -> MQdb (3 'Redis) cassandra.io
                         ^
      Socket.io <- Either of boxes -> Socket.io
 
-Create alarms in CloudWatch to auto-scale webserver based on traffic.  
+Create alarms in CloudWatch to auto-scale webserver based on traffic.  Uses hummingbird.
 
 Backs-up to S3
+
+### Process flow
+When you bootstrap, we initially push all the scripts in `gists/` to your Github account under the name `aws-bootstrap`.
+Next, we create AMIs for your webserver, api, distributed cache, and realtime instances by using the Gists as user-data.  
+When the AMIs are finished, we'll launch the instances via CloudWatch and create all the alarms to auto-scale the webserver and api.
