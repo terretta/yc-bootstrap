@@ -1,7 +1,17 @@
-var walker = require('walker');
+var walker = require('walker'), 
+  helper = require('./helper'), 
+    constants = require('./constants');
 
-Bootstrap = function() {
-
+Bootstrap = function(email, awsAccountId, awsKey, awsSecret, githubUsername, gihubPassword) {
+  helper = new helper.Helper();
+  if (!helper.validateEmail(email))
+    helper.exit(constants.ERROR.VALIDATE_EMAIL);
+  
+  if (!helper.validateAwsCredentials(awsAccountId, awsKey, awsSecret))
+    helper.exit(constants.ERROR.VALIDATE_AWS_CREDENTIALS);
+  
+  if (!helper.validateGithubCredentials(githubUsername, githubPassword))
+    helper.exit(constants.ERROR.VALIDATE_GITHUB_CREDENTIALS);
 };
 
 Bootstrap.prototype.addGistsToGithub = function() {
@@ -17,7 +27,6 @@ Bootstrap.prototype.addGistsToGithub = function() {
   .on('end', function() {
     console.log('All files traversed.');
   })
-
 };
 
 Bootstrap.prototype.createAMIInstances = function() {
