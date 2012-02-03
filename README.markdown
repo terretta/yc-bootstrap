@@ -1,6 +1,6 @@
 # aws-bootstrap
 
-A scaling, monitored, distributed-ready, persistent infrastructure-creator.  Getting there shouldn't be the hard part.
+A scaling, monitored, distributed-ready, persistent infrastructure-creator.  Take control over your IAAS.
 
 ## Giants
 
