@@ -1,6 +1,6 @@
-# aws-bootstrap
+# yc-bootstrap
 
-A scaling, monitored, distributed-ready, persistent infrastructure-creator.  Take control over your IAAS.
+A scaling, monitored, distributed-ready, realtime, persistent infrastructure-creator.  Take control over your IAAS.
 
 ## Giants
 
