@@ -37,7 +37,7 @@ Loadbalancer -> 2 Webservers/API -> MQdb (3 'Redis) cassandra.io
                         ^
      Socket.io <- Either of boxes -> Socket.io
 
-Create alarms in CloudWatch to auto-scale webserver based on traffic.  Uses hummingbird.
+Create alarms in CloudWatch to auto-scale webserver based on traffic.  Uses hummingbird. Comet as backup.
 
 Backs-up to S3
 
