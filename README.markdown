@@ -4,7 +4,7 @@ A scaling, monitored, distributed-ready, realtime, persistent infrastructure-cre
 
 ## Giants
 
-First and fore-most, I wouldn't have been able to create this without plenty of practice.
+First and fore-most, I've perfected this from m2m.io environment setup.
 
 ## Pre-reqs
 
