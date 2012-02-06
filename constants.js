@@ -1,12 +1,7 @@
-Constants = function() {
-
-};
-
-Constants.prototype.ERROR = function() {
-
-};
-
-Constants.ERROR.AWS_CREDENTIALS = 'error_aws_credentials';
-
-
-exports.Constants = Constants;
+function define(name, value) {
+  Object.defineProperty(exports, name, {
+    value: value,
+    enumerable: true
+  });
+}
+define('subfolder', 'yc-bootstrap/');

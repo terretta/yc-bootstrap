@@ -2,6 +2,16 @@
 
 A scaling, monitored, distributed-ready, realtime, persistent infrastructure-creator.  Take control over your IAAS.
 
+## Why
+
+1. Any code that was written for yc-boostrap, or external service used (cassandra.io), was done on a monetary basis.  You can always scale up if you don't fail.
+
+1. PAAS are great, but expensive (just look at the added cost of Heroku add-ons, or Chef hosting).  If you have a basic knowledge of AWS services, you can handle issues that arise.
+
+1. It should be about the idea and service, not about the infrastructure. 
+
+1. Puppet/Chef/CloudFormation are kind of a pain in the ass; let's stick to Bash basics.
+
 ## Giants
 
 First and fore-most, I've perfected this from m2m.io environment setup.

@@ -19,6 +19,8 @@
     "restler":"0.2.x",
     "walker": "",
     "ec2":"",
+    "node-aws":"",
+    "knox":"",
     "node-cloudwatch":"0.0.4",
     "walker":"",
     "cassandra-client":""
