@@ -2,9 +2,11 @@
 
 A scaling, monitored, distributed-ready, realtime, persistent infrastructure-creator.  Take control over your IAAS.
 
+**PRE ALPHA-WARE**, not ready, being ported!  
+
 ## Why
 
-1. Any code that was written for yc-boostrap, or external service used (cassandra.io), was done on a monetary basis.  You can always scale up if you don't fail.
+1. Any code that was written for yc-boostrap, or external service used (cassandra.io), was primarily used on a monetary basis.  You can always scale up if you don't fail.
 
 1. PAAS are great, but expensive (just look at the added cost of Heroku add-ons, or Chef hosting).  If you have a basic knowledge of AWS services, you can handle issues that arise.
 
@@ -12,9 +14,29 @@ A scaling, monitored, distributed-ready, realtime, persistent infrastructure-cre
 
 1. Puppet/Chef/CloudFormation are kind of a pain in the ass; let's stick to Bash basics.
 
-## Giants
+## Gisting
 
-First and fore-most, I've perfected this from m2m.io environment setup.
+```
+cd /home/ubuntu
+
+# Git + setup
+gist_id=<id>
+yes | apt-get install git
+git clone https://<username>:<password>@github.com/gist/$gist_id.git
+chmod a+x $gist_id/*
+source $gist_id/credentials.sh # is extended by
+  source $gist_id/common_utils.sh # is extended by
+    source $gist_id/base_setup.sh # is extended by this
+
+# Install API on every box
+install_play_framework
+  git_repo <my-play-app>
+  install_play_framework_app /home/ubuntu/<my-play-app>
+    monitor_new_service <my-play-app>
+
+# Account for changes
+rm -r $gist_id && shutdown -r now
+```
 
 ## Pre-reqs
 
